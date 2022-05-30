@@ -86,8 +86,10 @@
 // 8. Написать функцию, которая принимает часы, минуты и секунды и возвращает это время в секундах.
 
 function secondsTime(hour, min, sec) {
-    let result = ((hour * 3600) + (min * 60) + sec);
-    console.log(result);
+    // let result = ((hour * 3600) + (min * 60) + sec);
+    // console.log(result);
+    /* for 10 */
+    return ((hour * 3600) + (min * 60) + sec);
 }
 // secondsTime(2, 14, 28);
 
@@ -98,8 +100,10 @@ function reverseSecondsTime(sec) {
     let hour = parseInt(sec / 3600);
     let min = parseInt((sec - hour * 3600) / 60);
     sec = sec - hour * 3600 - min * 60;
-    let result = ((hour < 10 ? "0" + hour : hour) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec));
-    console.log(result);
+    // let result = ((hour < 10 ? "0" + hour : hour) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec));
+    // console.log(result);
+    /* for 10 */
+    return ((hour < 10 ? "0" + hour : hour) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec));
 }
 // reverseSecondsTime(8068);
 
@@ -112,7 +116,6 @@ function differenceTime(hour1, min1, sec1, hour2, min2, sec2) {
     let time1 = ((hour1 * 3600) + (min1 * 60) + sec1);
     let time2 = ((hour2 * 3600) + (min2 * 60) + sec2);
     let sec = time1 > time2 ? time1 - time2 : time2 - time1;
-    reverseSecondsTime(sec);
-    // console.log('Difference in time' + ':' + ' ' + reverseSecondsTime(sec));
+    console.log('Difference in time' + ':' + ' ' + reverseSecondsTime(sec));
 }
 differenceTime(18, 30, 24, 4, 31, 25);
